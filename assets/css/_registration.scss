@@ -1,0 +1,140 @@
+@import "vars";
+
+.registration {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    gap: 128px;
+
+    &__form {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+
+        &__header {
+            color: $basic_font_color;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            padding-bottom: 10px;
+        }
+
+        &__input-field {
+            width: 360px;
+            height: 45px;
+            box-sizing: border-box;
+            margin: 10px 0 10px 0;
+            padding: 0 16px 0 16px;
+            fill: $basic_background;
+            border: solid 1px #A4A4A4;
+            color: #B1B1B1;
+            font-family: "Montserrat";
+            font-weight: 300;
+        }
+
+        &__radio {
+            margin: 20px 0 33px 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        &__radio-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            color: $basic_font_color;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 13px;
+        }
+
+        &__text {
+            color: #B1B1B1;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 16px;
+            max-width: 360px;
+            padding-top: 5px;
+            margin-bottom: 40px;
+        }
+
+        &__button {
+            width: 167px;
+            height: 50px;
+            box-sizing: border-box;
+            background-color: $highlights_background;
+            border: solid 1px $highlights_background;
+            color: #FFF;
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        &__button:hover {
+            background-color: $basic_background;
+            color: $highlights_font_color;
+        }
+    }
+
+    &__loyalty {
+        color: #000;
+        max-width: 652px;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 300;
+
+        &__header {
+            font-weight: 300;
+            padding-bottom: 22px;
+        }
+
+        &__text {
+            padding-bottom: 22px;
+        }
+
+        &__list {
+            list-style: none;
+        }
+
+        &__list-item {
+            padding-bottom: 16px;
+        }
+
+        &__list-item::before {
+            content: '✔';
+            padding-right: 22px;
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .registration {
+        padding-top: 40px;
+        gap: 22px;
+    
+        &__loyalty {
+            max-width: 354px;
+            font-size: 16px;
+            line-height: 19px;
+    
+            &__header {
+                padding-bottom: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .registration {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
